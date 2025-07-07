@@ -29,5 +29,11 @@ public class QuestionService {
     }
 
 
+    public String addQuestions(Question question){
+        questionDao.save(question);
+        return "SUCCESS TO ADD QUESTIONS";
+    }
+
+
 
 }
