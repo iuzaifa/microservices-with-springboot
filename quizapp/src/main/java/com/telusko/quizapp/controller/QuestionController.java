@@ -2,6 +2,8 @@ package com.telusko.quizapp.controller;
 
 
 import com.telusko.quizapp.model.Question;
+import com.telusko.quizapp.model.QuestionWrapper;
+import com.telusko.quizapp.model.Response;
 import com.telusko.quizapp.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,5 +36,22 @@ public class QuestionController {
     @PostMapping("/add")
     public ResponseEntity<String> addQuestions(@RequestBody Question question){
         return new ResponseEntity<>(questionService.addQuestions(question), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/generate")
+    public List<Integer> getQuestionForQuiz(@RequestParam String categoryName, @RequestParam Integer numQuestions){
+        return questionService.getQuestionForQuiz(categoryName, numQuestions);
+
+    }
+
+
+    @PostMapping("/getQuestion")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionFromId(@RequestParam List<Integer> questionId){
+        return new ResponseEntity<>(questionService.getQuestionFromId(questionId), HttpStatus.OK);
+    }
+
+    @PostMapping("/get-score")
+    public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses){
+        return new ResponseEntity<>(questionService.getScore(responses), HttpStatus.OK);
     }
 }
