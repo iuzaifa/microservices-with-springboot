@@ -45,6 +45,7 @@ public class QuestionService {
     }
 
     public List<QuestionWrapper> getQuestionFromId(List<Integer> questionId) {
+
         List<QuestionWrapper> wrappers = new ArrayList<>();
         List<Question> questions = new ArrayList<>();
         for (Integer id : questionId){
@@ -53,6 +54,7 @@ public class QuestionService {
         for (Question question : questions){
             QuestionWrapper wrapper = new QuestionWrapper();
             wrapper.setId(question.getId());
+            wrapper.setQuestionTitle(question.getQuestionTitle());
             wrapper.setOption1(question.getOption1());
             wrapper.setOption2(question.getOption2());
             wrapper.setOption3(question.getOption3());
