@@ -5,6 +5,7 @@ import com.telusko.quizapp.dao.QuizDao;
 import com.telusko.quizapp.model.Question;
 import com.telusko.quizapp.model.QuestionWrapper;
 import com.telusko.quizapp.model.Quiz;
+import com.telusko.quizapp.model.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,5 +51,21 @@ public class QuizService {
             questionForUser.add(qr);
         }
         return questionForUser;
+    }
+
+    public Integer calculateResult(Integer id, List<Response> responses) {
+        Quiz quiz = quizDao.findById(id).get();
+        List<Question> questions = quiz.getQuestion();
+
+        int i = 0;
+        int right = 0;
+        for (Response response : responses){
+            if(response.getResponse().equals(questions.get(i).getRightAnswer())){
+                right++;
+            };
+            i++;
+        }
+
+        return right;
     }
 }
