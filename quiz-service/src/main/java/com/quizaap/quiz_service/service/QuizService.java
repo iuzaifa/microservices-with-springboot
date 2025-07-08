@@ -1,11 +1,10 @@
 package com.quizaap.quiz_service.service;
 
-import com.telusko.quizapp.dao.QuestionDao;
-import com.telusko.quizapp.dao.QuizDao;
-import com.telusko.quizapp.model.Question;
-import com.telusko.quizapp.model.QuestionWrapper;
-import com.telusko.quizapp.model.Quiz;
-import com.telusko.quizapp.model.Response;
+import com.quizaap.quiz_service.dao.QuizDao;
+import com.quizaap.quiz_service.model.Question;
+import com.quizaap.quiz_service.model.QuestionWrapper;
+import com.quizaap.quiz_service.model.Quiz;
+import com.quizaap.quiz_service.model.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,19 +18,19 @@ public class QuizService {
     @Autowired
     private QuizDao quizDao;
 
-    @Autowired
-    private QuestionDao questionDao;
+//    @Autowired
+//    private QuestionDao questionDao;
 
 
 
-    public Quiz createQuiz(String category, Integer numQ, String title) {
-
-        List<Question> questions = questionDao.findRandomQuestionByCategory1(category, numQ);
-        Quiz quiz = new Quiz();
-        quiz.setTitle(title);
-        quiz.setQuestion(questions);
-        return quizDao.save(quiz);
-    }
+//    public Quiz createQuiz(String category, Integer numQ, String title) {
+//
+//        List<Question> questions = questionDao.findRandomQuestionByCategory1(category, numQ);
+//        Quiz quiz = new Quiz();
+//        quiz.setTitle(title);
+//        quiz.setQuestion(questions);
+//        return quizDao.save(quiz);
+//    }
 
 
     public List<QuestionWrapper> getQuizQuestions(Integer quizId) {

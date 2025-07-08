@@ -1,8 +1,8 @@
 package com.quizaap.quiz_service.controller;
 
 
-import com.telusko.quizapp.model.Response;
-import com.telusko.quizapp.service.QuizService;
+import com.quizaap.quiz_service.model.Response;
+import com.quizaap.quiz_service.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,10 +18,10 @@ public class QuizController {
     @Autowired
     private QuizService quizService;
 
-    @PostMapping("/create")
-    public ResponseEntity<?> createQuiz(@RequestParam String category, @RequestParam Integer numQ, @RequestParam String title ){
-        return new ResponseEntity<>(quizService.createQuiz(category, numQ, title), HttpStatus.CREATED);
-    }
+//    @PostMapping("/create")
+//    public ResponseEntity<?> createQuiz(@RequestParam String category, @RequestParam Integer numQ, @RequestParam String title ){
+//        return new ResponseEntity<>(quizService.createQuiz(category, numQ, title), HttpStatus.CREATED);
+//    }
 
     @GetMapping("/get/{quizId}")
     public ResponseEntity<?> getQuizQuestions(@PathVariable Integer quizId){
