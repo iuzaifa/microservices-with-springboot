@@ -1,4 +1,4 @@
-package com.quizaap.quiz_service.model;
+package com.telusko.quizapp.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +24,4 @@ public class QuestionWrapper {
         this.option3 = option3;
         this.option4 = option4;
     }
-
-    // updated
 }

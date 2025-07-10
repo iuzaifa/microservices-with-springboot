@@ -1,4 +1,4 @@
-package com.quizaap.quiz_service.model;
+package com.telusko.quizapp.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

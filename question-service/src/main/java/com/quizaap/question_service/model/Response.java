@@ -1,4 +1,4 @@
-package com.quizaap.quiz_service.model;
+package com.telusko.quizapp.model;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
