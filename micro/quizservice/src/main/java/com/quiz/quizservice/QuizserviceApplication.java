@@ -1,14 +1,13 @@
-package com.telusko.quizapp;
+package com.quiz.quizservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QuizappApplication {
+public class QuizserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QuizappApplication.class, args);
-		System.out.println("App Start Quiz App ........ !");
+		SpringApplication.run(QuizserviceApplication.class, args);
 	}
 
 }

@@ -1,4 +1,15 @@
 package com.quiz.quizservice.services;
 
-public class QuizService {
+import com.quiz.quizservice.entity.Quiz;
+
+import java.util.List;
+
+public interface QuizService {
+
+    Quiz add(Quiz quiz);
+
+
+    List<Quiz> getAll();
+
+    Quiz getById(Long id);
 }

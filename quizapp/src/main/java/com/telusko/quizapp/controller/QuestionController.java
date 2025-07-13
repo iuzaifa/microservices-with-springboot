@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/question")
+@RequestMapping("/quizapp")
 public class QuestionController {
 
-    // http://localhost:8080/question/allQuestions
+    // http://localhost:8080/quizapp/allQuestions
 
     @Autowired
     private QuestionService questionService;
