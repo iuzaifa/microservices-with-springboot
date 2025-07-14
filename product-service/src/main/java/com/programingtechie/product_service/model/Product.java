@@ -16,7 +16,7 @@ public class Product {
 
 
     @Id
-    private int id;
+    private String id;
     private String name;
     private String description;
     private BigDecimal price;
