@@ -1,5 +1,6 @@
 package com.programingtechie.product_service.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,12 +10,11 @@ import java.math.BigDecimal;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class ProductRequest {
-
+@NoArgsConstructor
+public class ProductResponse {
+    private int id;
     private String name;
     private String description;
     private BigDecimal price;
-
 }
